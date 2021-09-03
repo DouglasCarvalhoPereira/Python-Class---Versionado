@@ -6,7 +6,7 @@ print(name.upper())#Maiusculo
 
 print(name.lower())#Minusculo
 
-print(name.strip())#Espaço entre os caracteres
+print(name.strip())#Remove Espaço entre os caracteres
 print(name.lstrip())#Elimina Espaços do lado esquerdo 
 print(name.rstrip())#Elimina Espaços do lado direito
 
@@ -25,7 +25,7 @@ print("...".join(others_name))#Contactenou as strings com Join, definindo o que 
 if name.lower() == 'douglas':
     print("Ok, todos os caracteres convertidos em minúsculos para verificação!")
 
-print(list.split())#Converte uma frase com espaço em String individua
+print(list.split())#Converte uma frase com espaço em String individual
 
 #Todos os métodos disponíveis
 #https://docs.python.org/3/library/stdtypes.html#string-methods
