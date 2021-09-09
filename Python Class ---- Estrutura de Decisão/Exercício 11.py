@@ -1,16 +1,18 @@
-#As Organizações Tabajara resolveram dar um aumento de salário aos seus colaboradores e lhe contraram para 
-# desenvolver o programa que calculará os reajustes.
-#Faça um programa que recebe o salário de um colaborador e o reajuste segundo o seguinte critério, 
-# baseado no salário atual:
-#salários até R$ 280,00 (incluindo) : aumento de 20%
-#salários entre R$ 280,00 e R$ 700,00 : aumento de 15%
-#salários entre R$ 700,00 e R$ 1500,00 : aumento de 10%
-#salários de R$ 1500,00 em diante : aumento de 5% Após o aumento ser realizado, informe na tela:
-#o salário antes do reajuste;
-#o percentual de aumento aplicado;
-#o valor do aumento;
-#o novo salário, após o aumento.
-
 salario_atual = float(input('Digite seu salário para saber o valor do seu aumento: '))
 
-if salario_atual 
+if salario_atual <= 280:
+    reajuste = salario_atual+ (salario_atual/100)*20
+    print('O salário de {salario_atual} + 20% é = {reajuste}' .format(salario_atual=salario_atual, reajuste=reajuste))
+
+elif salario_atual > 280 and salario_atual < 700:
+    reajuste = salario_atual+ (salario_atual/100)*15
+    print('O salário de {salario_atual} + 15% é = {reajuste}' .format(salario_atual=salario_atual, reajuste=reajuste))
+
+elif salario_atual > 700 and salario_atual < 1500:
+    reajuste = salario_atual + (salario_atual/100)*10
+    print('O salário de {salario_atual} + 10% é = {reajuste}' .format(salario_atual=salario_atual, reajuste=reajuste))
+
+else:
+    
+    reajuste = salario_atual + (salario_atual/100)*5
+    print('O salário de {salario_atual} + 5% é = {reajuste}' .format(salario_atual=salario_atual, reajuste=reajuste))
