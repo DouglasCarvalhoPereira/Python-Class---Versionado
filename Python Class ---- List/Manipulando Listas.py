@@ -18,6 +18,18 @@ lista.insert(30, 'FIM') #Se o indíce no caso '30' for maior que o comprimento a
 lista.remove('a') #Remove da lista
 lista.remove('i') #Remove da lista
  
+lista.sort() #Classifica em ordem crescente por padrão
+
+lista.reverse() #Inverte a ordem dos elementos de uma lista
+
+lista.clear() #Remove todos os itens da lista
+
+lista.copy() #Cria uma cópia da lista
+
+lista.extend() #Acrescenta outra lista ou elementos ao final da lista
+
+ 
+
 print('Lista depois: ', lista)
 
 lista.pop(2) #Remove o indice.
@@ -27,4 +39,3 @@ print('Após .pop()', lista)
 lista[0] = 'COMEÇO' # Susbtitui index passado 
 
 print(lista)
-
