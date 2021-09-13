@@ -9,7 +9,7 @@ def pig_latin(text):
     word = word[1:] + word[0] + 'ay'
     # Create the pig latin word and add it to the list
     new_string.append(word)
-    # Turn the list back into a phrase
+    # Turn the list back int o a phrase
   return ' '.join(new_string)
 		
 print(pig_latin("hello how are you")) # Should be "ellohay owhay reaay ouyay"

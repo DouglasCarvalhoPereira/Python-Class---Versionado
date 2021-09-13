@@ -33,7 +33,7 @@ for i in range(1):
 print(docs)
 
 for doc in docs:
-    print(doc) #Dessa maneira exibo cada chave do dicionário
+    print(doc) #  Dessa maneira exibo cada chave do dicionário
 
 
 for key, element in docs.items(): #Usando ITEM() é possível acessar os dois elementos do dicionário.
