@@ -18,7 +18,7 @@ print(10+45+24+28+24+10+12+6+14)
 print(173%11)
 print(11-8) #DIGITE 1 ENCONTRADO
 print((20*'='))
-#ENCONTRANDO O SEGUNDO DIGITO
+##ENCONTRANDO O SEGUNDO DIGITO
 print(1*11)
 print(5*10)
 print(3*9)
