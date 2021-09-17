@@ -3,6 +3,10 @@
 # For example, squares(2, 3) should return [4, 9].
 
 def squares(start, end):
+	"""
+	Eleva cada um dos elementos da lista ao quadrado
+	
+	"""
 	return [x**2 for x in range(start, end+1)]
 
 print(squares(2, 3)) # Should be [4, 9]
