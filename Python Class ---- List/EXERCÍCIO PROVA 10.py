@@ -1,0 +1,1 @@
+fin = open('Pass@#words.txt')
