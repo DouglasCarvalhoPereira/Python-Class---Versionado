@@ -14,4 +14,4 @@ fruit = Apple("Green", "Doce","Apple") #PARAMETROS PASSADOS PARA O MÉTODO CONST
 print(fruit.color, fruit.flavor, fruit.fruit)
 
 print(fruit) #Usando __str__ os parametros passados anteriormento foram mantidos e o resultado impresso por inteiro
-
+#Edição
