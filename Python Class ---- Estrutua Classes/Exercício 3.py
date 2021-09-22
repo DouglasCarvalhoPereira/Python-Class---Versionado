@@ -6,11 +6,21 @@ import math
 # um local. Depois, deve criar um objeto com as medidas e calcular a quantidade de pisos e de 
 # rodapés necessárias para o local.
 
-comprimento_Usuario = float(input("Digite o comprimento: "))
-altura_Usuario = float(input("Digite a altura: "))
+comprimento_Usuario = ""
+altura_Usuario = ""
+
+while comprimento_Usuario == "":
+    comprimento_Usuario = input("Digite o comprimento: ")
+    if comprimento_Usuario == "":
+        print("Erro: CAMPO VAZIO")
+
+while altura_Usuario == "": 
+    altura_Usuario = input("Digite a altura: ")
+    if altura_Usuario == "":
+        print("Erro: CAMPO VAZIO")
 
 class Retangulo:
-    tamanha_rodape = 0.20 * 0.5 #cm
+    tamanha_rodape = 0.2 #cm
     metragem_piso = 0.50 * 0.50 #m²
 
     def __init__(self, comprimento, altura):
@@ -22,8 +32,8 @@ class Retangulo:
         #return "O é {} e a altura {}. A área é igual a {}m² e Perimetro {}.".format(self.comprimento, self.altura)
 
     def alteraValoresDeMedida(self):
-        self.comprimento = comprimento_Usuario
-        self.altura = altura_Usuario
+        self.comprimento = float(comprimento_Usuario)
+        self.altura = float(altura_Usuario)
         return print("O comprimento é {} e a altura {}." .format(self.comprimento, self.altura))
 
     def calcularArea(self):
@@ -35,13 +45,13 @@ class Retangulo:
         return print("O perimetro é {:.0f} M." .format(self.perimetro))
 
     def calcula_quantidade_Piso(self):
-        self.quantidade_Piso = math.ceil(self.metragem_piso * self.area)    
+        self.quantidade_Piso = math.ceil(self.area / self.metragem_piso)
 
-        return print("A quantidade de piso necessária para essa area é {:.0f} unidade(s)." .format(self.quantidade_Piso))
+        return print("A quantidade de PISO necessária para essa area é {} unidade(s)." .format(self.quantidade_Piso))
 
     def calcula_qauntidade_de_rodape(self):
         self.quantidade_Rodapé = self.perimetro / self.tamanha_rodape
-        return print(self.quantidade_Rodapé)
+        return print("A quantidade de RODAPÉ necessária para essa area é {:.0f} unidade(s)." .format(self.quantidade_Rodapé))
 
 
 new_objeto = Retangulo(comprimento_Usuario, altura_Usuario)
