@@ -5,6 +5,7 @@
 # pessoa envelhece, sendo a idade dela menor que 21 anos, ela deve crescer 0,5 cm.
 
 class Pessoa:
+    
     def __init__(self, nome, idade, peso, altura):
         self.nome = nome
         self.idade = idade
@@ -14,20 +15,27 @@ class Pessoa:
     def __str__(self) -> str:
         pass
 
-    def envelhecer(self, anos):
-        self.idade += anos
-        return self.idade
+    def envelhecer(self):
+        if self.idade >= 21:
+            self.altura = self.altura
+        else:
+            self.altura += 0.5
 
-    def engordar(self, kilos):
-        self.peso += kilos
-        return self.peso
+    def engordar(self, peso):
+        self.peso += peso
 
-    def emagrecer(self,perda_peso):
-        self.peso -= perda_peso
+    def emagrecer(self,peso):
+        self.peso -= peso
 
-    def crescer(self, anos):
-        if anos < 21:
-            self.idade += (0.5)*(anos)
+    def crescer(self, altura):
+        self.altura += altura
 
-douglas = Pessoa("Douglas", 26, 62, 1.69)
+    def mostraPessoa(self):
+        print(f'Nome: {self.nome} Idade: {self.idade} anos Peso: {self.peso} Kg Altura: {self.altura}')
+
+
+        
+      
+douglas = Pessoa("Douglas", 22, 62, 169)
 douglas.envelhecer()
+douglas.mostraPessoa()
