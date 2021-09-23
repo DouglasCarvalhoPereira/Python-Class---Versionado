@@ -4,21 +4,22 @@ import random
 # são os seguintes: alterarNome, depósito e saque; No construtor, saldo é opcional, com valor 
 # default zero e os demais atributos são obrigatórios.
 class contaCorrente():
-    def __init__(self,nome , saldo):
-        self.numero_de_conta = gerador_de_conta.aleatorio(self)
+
+    def __init__(self, nome, saldo, numero_de_conta = 0):
         self.nome = nome
         self.saldo = saldo
+        self.numero_de_conta = gerador_de_conta.aleatorio(self)
+
 
     def __str__(self) -> str:
-        return 
+        pass 
 
     def altera_Nome(self, nome):
-        self.altera_Nome = nome
+        self.nome = nome
 
     def deposito(self, saldo):
-        conta_deposito = 0
-        conta_deposito += saldo
-        return self.conta_deposito
+        self.saldo += self.saldo
+        return self.saldo
 
     def saque(self):
         pass
@@ -35,4 +36,5 @@ class gerador_de_conta(contaCorrente):
 
 
 
-douglas = contaCorrente("Douglas", 100)
+douglas = contaCorrente("Douglas", 500)
+print(douglas.deposito(100))
