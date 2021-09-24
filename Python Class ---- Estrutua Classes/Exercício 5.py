@@ -5,7 +5,7 @@ import random
 # default zero e os demais atributos são obrigatórios.
 class contaCorrente():
 
-    def __init__(self, nome, saldo, numero_de_conta = 0):
+    def __init__(self, nome = '', saldo = 0, numero_de_conta = ()):
         self.nome = nome
         self.saldo = saldo
         self.numero_de_conta = gerador_de_conta.aleatorio(self)
@@ -16,16 +16,23 @@ class contaCorrente():
 
     def altera_Nome(self, nome):
         self.nome = nome
+        return self.nome
 
-    def deposito(self, saldo):
-        self.saldo += self.saldo
+    def deposito(self, saldo = 0):
+        self.saldo += saldo
         return self.saldo
 
-    def saque(self):
-        pass
+    def saque(self, saldo = 0):
+        self.saldo -= saldo
+        return self.saldo
+
+    def mostrarConta(self):
+        return print(f"Número CC: {self.numero_de_conta} \nNome: {self.nome} \nSaldo: {self.saldo}")
 
 
-class gerador_de_conta(contaCorrente):
+
+
+class gerador_de_conta(contaCorrente): #NÚMERO ALEATÓRIO POR DIVERSÃO, VAI QUE CAI UMA CONTA MILIONÁRIA
     def __init__(self, n_conta):
         self.n_conta = n_conta
     
@@ -36,5 +43,8 @@ class gerador_de_conta(contaCorrente):
 
 
 
-douglas = contaCorrente("Douglas", 500)
-print(douglas.deposito(100))
+douglas = contaCorrente()
+douglas.altera_Nome("Douglas")
+douglas.deposito(100000000.0)
+douglas.saque()
+douglas.mostrarConta()
