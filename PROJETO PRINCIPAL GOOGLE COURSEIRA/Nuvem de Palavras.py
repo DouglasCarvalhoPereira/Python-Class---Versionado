@@ -1,2 +1,4 @@
-ref_arquivo = open("recomeco.txt","r")
-linha = ref_arquivo.readline()
+ref_arquivo = open("recomeco.txt")
+linhas = ref_arquivo.readline()
+for linha in linhas:
+    print(linha)    
