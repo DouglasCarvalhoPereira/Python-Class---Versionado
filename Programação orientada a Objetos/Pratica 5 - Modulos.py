@@ -7,5 +7,5 @@ aleatorio = random.randint(0, 1000)
 print(aleatorio)
 
 data = datetime.datetime.now()
-print(data.day) 
+print(data.day)  
 print(data.year)
