@@ -1,5 +1,8 @@
 #MÓDULOS
 #Podem ser usados para organizar funções, classes
+
+https://pypi.org/ #Maior base Python! Programadores do mundo inteiro colocam seus modulos lá
+
 import random
 import datetime
 
