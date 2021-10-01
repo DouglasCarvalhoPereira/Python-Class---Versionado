@@ -4,4 +4,3 @@ soma = [new_list.extend(x) if type(x) is list else new_list.append(x) for x in t
 
 print(sum(new_list))
 
-

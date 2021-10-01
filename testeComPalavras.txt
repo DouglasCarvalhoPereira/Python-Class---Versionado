@@ -1,0 +1,4 @@
+A Os números formatos como String a seguir usam o módulo como ferramenta '3' '0.3' 'line2' 
+é diferente do inteiro 42
+ Contiua no próximo episódio...
+234
