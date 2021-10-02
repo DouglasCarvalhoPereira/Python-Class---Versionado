@@ -1,18 +1,16 @@
 import string
-from typing import Text
 
-txt = open('TOP_300_CLIENTES.txt','r')
-new_num = txt.readlines()
-num_11_digitos = [tel for tel in new_num if len(tel) != 11]
+txt = open('TOP_300_CLIENTES.txt','r+').readlines()
 
-#sem_pontuação = ''.join([tel.replace(' ','') for tel in txt if tel not in string.punctuation])
+#new_text = open('Formatado.txt','w')
+sem_pontuação = ''.join([tel.replace(" ","") for tel in txt if tel not in string.punctuation])
+txt.write(sem_pontuação)
 
-print(num_11_digitos)
 
-for tel in new_num:
-
-    nonoDigito = tel[2]
+for tel in new_text:
+    nonoDigito = tel[2:]
     prox_4digitos = tel[3:7]
     ultimos_4digitos = tel[-5:]
     new_num = nonoDigito + " " + prox_4digitos + " " + ultimos_4digitos
+    print(new_num, end='')
                 
