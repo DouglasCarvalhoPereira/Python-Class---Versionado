@@ -5,6 +5,7 @@ txt = open('TOP_300_CLIENTES.txt','r+').readlines()
 #new_text = open('Formatado.txt','w')
 sem_pontuação = ''.join([tel.replace(" ","") for tel in txt if tel not in string.punctuation])
 txt.write(sem_pontuação)
+new_text =  []
 
 
 for tel in new_text:
