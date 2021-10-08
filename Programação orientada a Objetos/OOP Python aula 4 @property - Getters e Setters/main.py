@@ -1,0 +1,14 @@
+class A:
+    vc = 123
+
+    def __init__(self):
+        self.vc = 321
+
+
+a1 = A()
+a2 = A()
+
+print(a1.vc) #ACESSNADO ATRIBUTOS DA INSTâNCIA
+print(a2.vc) #ACESSNADO ATRIBUTOS DA INSTâNCIA
+
+print(A.vc) #ACESSNADO ATRIBUTOS DA CLASSE, MAIS UTILIZADO PARA ALTERAR ATRIBUTOS DE TODAS AS INTÂNCIAS DA CLASSE
