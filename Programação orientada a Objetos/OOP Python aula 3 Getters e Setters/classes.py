@@ -1,19 +1,34 @@
-#Associação entre escritos, maquina de escrever, caneta e pape.
-class Escritor:
-    def __init__(self, nome):
-        self.__nome = nome
+class Produto:
+    def __init__(self, nome, preco):
+        self.nome = nome
+        self.preco = preco
+    
+    def desconto(self, percentual):
+        self.preco = self.preco - (self.preco * (percentual / 100))
+        return self.preco
+
 
     @property
     def nome(self):
-        return self.__nome
+        return self._nome
 
-class Ceneta:
-    def __init__(self, marca):
-        self.__marca = marca
+    @nome.setter
+    def nome(self, valor):
+        if not isinstance(valor, str):
+            print("É número, digite novamente")
+        
+        self._nome = valor
 
     @property
-    def marca(self):
-        return self.__marca
+    def preco(self):
+        return self._preco
 
-class Maquina_Escrever:
-    pass
+    @preco.setter
+    def preco(self, config_preco):
+        if isinstance(config_preco, str):
+            config_preco = float(config_preco.replace('R$', ''))
+        
+        self._preco = config_preco
+
+
+           
